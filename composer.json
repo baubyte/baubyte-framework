@@ -1,0 +1,45 @@
+{
+    "name": "baubyte/baubyte-framework",
+    "description": "Simple Framework PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Baubyte\\": "src/"
+        },
+        "files": [
+            "src/Helpers/app.php",
+            "src/Helpers/http.php",
+            "src/Helpers/array.php",
+            "src/Helpers/string.php",
+            "src/Helpers/session.php",
+            "src/Helpers/auth.php"
+        ],
+        "classmap": [
+            "src/Contracts/Stubs/Stringable.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Baubyte\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --color=always --testdox -v tests/",
+        "php-cs-fixer": "php-cs-fixer fix --diff"
+    },
+    "authors": [
+        {
+            "name": "BauByte",
+            "email": "paredbaez.martin@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.13"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/console": "^6.2"
+    }
+}
